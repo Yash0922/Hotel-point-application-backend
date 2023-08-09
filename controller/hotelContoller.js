@@ -2,16 +2,18 @@ const {Visitor} =  require("../models/visitor");
 
 async function  addData (data){
 
-    let newCollage = await Visitor.create({
-        name: data.name,
-        Email: data.Email,
-        Location: data.Location,
-        Number_of_touriest: data.Number_of_touriest,
-        Budget_per_person: data.Budget_per_person,
+    let newHotel = await Visitor.create({
+        title: data.title,
+        description: data.description,
+        location: data.location,
+        price: data.price,
+        Start_date:data.Start_date,
+        End_date:data.End_date
+        
        
     })
 
-    return newCollage;
+    return newHotel;
 }
 
 module.exports =  {addData}

@@ -8,7 +8,7 @@ const app = express()
 
 app.use(express.json())
 app.use(cors())
-const SECRET_KEY = 'your-secret-key';
+
 app.use("/",HotelRouter);
 
 app.get("/", async (req,res)=>{

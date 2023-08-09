@@ -1,24 +1,28 @@
 const mongoose = require('mongoose')
 
 const VisitorsSchema = new mongoose.Schema({
-    name: {
+    title: {
         type: String,
         required: true
     },
-    Email: {
+    description: {
         type: String,
         required: true
     },
-    Location: {
+    location: {
         type: String,
         required: true,
     },
-    Number_of_touriest: {
+    price: {
         type: Number,
         required: true,
     },
-    Budget_per_person: {
-        type: Number,
+    Start_date: {
+        type: String,
+        required: true,
+    },
+    End_date: {
+        type: String,
         required: true,
     },
     
