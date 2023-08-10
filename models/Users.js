@@ -7,7 +7,6 @@ const userSchema = new mongoose.Schema({
     },
     email: {
         type: String,
-        required: true
     },
     password : {
         type: String,
@@ -15,11 +14,11 @@ const userSchema = new mongoose.Schema({
     },
     phoneNumber:{
         type: String,
-        required: true
+        
     },
     bookings:[{
         type: String,
-        required: true
+        
     }]
    
     
