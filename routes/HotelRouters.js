@@ -119,7 +119,7 @@ HotelRouter.post('/register', async (req, res) => {
         res.status(401).json({ error: 'User not found' });
       } else if (await bcrypt.compare(password, user.password)) {
         const token = jwt.sign({ username }, SECRET_KEY);
-        res.status(200).json({ token });
+        res.status(200).json({ token ,username,password });
       } else {
         res.status(401).json({ error: 'Invalid credentials' });
       }
