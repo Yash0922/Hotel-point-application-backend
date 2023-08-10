@@ -69,6 +69,18 @@ HotelRouter.get('/allData', async (req, res) => {
   }
 });
 
+HotelRouter.get('/Users', async (req, res) => {
+  try {
+    const Users = await User.find({});
+
+    res.json({ Users });
+    
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({'An error occurred': error  });
+  }
+});
+
 HotelRouter.post('/Booking', async (req, res) => {
   const { property, startDate, endDate } = req.body;
 
@@ -95,6 +107,7 @@ HotelRouter.post('/register', async (req, res) => {
       res.status(500).json({ error: 'An error occurred' });
     }
   });
+
   
   // User login
   HotelRouter.post('/login', async (req, res) => {
