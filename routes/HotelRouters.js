@@ -95,11 +95,11 @@ HotelRouter.post('/Booking', async (req, res) => {
 });
 
 HotelRouter.post('/register', async (req, res) => {
-    const { username, password } = req.body;
+    const { username, password,Email } = req.body;
   
     try {
       const hashedPassword = await bcrypt.hash(password, 10);
-      const newUser = new User({ username, password: hashedPassword });
+      const newUser = new User({ username, password: hashedPassword ,Email});
       await newUser.save();
       res.status(201).json({ message: 'User registered successfully' });
     } catch (error) {
