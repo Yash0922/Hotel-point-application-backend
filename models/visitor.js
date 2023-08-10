@@ -13,6 +13,10 @@ const VisitorsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    Images:[ {
+        type: String,
+        required: true
+    }],
     price: {
         type: Number,
         required: true,
@@ -25,6 +29,10 @@ const VisitorsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    Rating:{
+        type: String,
+        required: true,
+    }
     
     
     

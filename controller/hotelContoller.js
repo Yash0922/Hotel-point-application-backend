@@ -8,7 +8,9 @@ async function  addData (data){
         location: data.location,
         price: data.price,
         Start_date:data.Start_date,
-        End_date:data.End_date
+        End_date:data.End_date,
+        Rating: data.Rating,
+        Images: data.Images
         
        
     })
